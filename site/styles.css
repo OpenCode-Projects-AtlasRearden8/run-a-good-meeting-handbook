@@ -1,0 +1,262 @@
+/* Run a Good Meeting — site styles
+   Warm, plain, print-friendly. No frameworks, no fonts fetched from the network. */
+
+:root {
+  --paper: #fdf9f3;
+  --ink: #2b2724;
+  --muted: #6d645c;
+  --accent: #b4552d;
+  --accent-soft: #f6e3d7;
+  --card: #ffffff;
+  --line: #e7ddd2;
+  --code-bg: #f4efe7;
+  --ok: #3c7a4d;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* ---------- layout ---------- */
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header.site {
+  border-bottom: 3px solid var(--ink);
+  padding: 2.25rem 0 1.25rem;
+}
+
+header.site .kicker {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+
+header.site h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+header.site .tagline {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+nav.top {
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--line);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+}
+
+nav.top ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+nav.top a {
+  display: block;
+  padding: 0.55rem 0.9rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+nav.top a:hover { color: var(--accent); }
+
+nav.top a[aria-current="page"] {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+  font-weight: bold;
+}
+
+main { padding: 2rem 0 3.5rem; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer.site a { color: inherit; }
+
+/* ---------- content ---------- */
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+
+p { margin: 0.8rem 0; }
+
+a { color: var(--accent); }
+
+strong { font-weight: bold; }
+
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.3rem 0; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2.5rem 0;
+}
+
+blockquote {
+  margin: 1.2rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--card);
+  color: var(--muted);
+  font-style: italic;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85em;
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ---------- cards & specials ---------- */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.1rem 1.3rem;
+  margin: 1.4rem 0;
+  box-shadow: 0 1px 2px rgba(43, 39, 36, 0.05);
+}
+
+.tip, .warn {
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+  font-size: 0.95rem;
+}
+
+.tip {
+  background: #eef4ee;
+  border: 1px solid #cfe0cf;
+}
+
+.tip::before {
+  content: "GOOD TO KNOW — ";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--ok);
+}
+
+.warn {
+  background: #fbf1e4;
+  border: 1px solid #e8d3b4;
+}
+
+.warn::before {
+  content: "A GENTLE CAUTION — ";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+/* chapter setup on the index page */
+
+.chapters { list-style: none; padding: 0; margin: 1.6rem 0; }
+
+.chapters li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 0.8rem 0;
+}
+
+.chapters a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.chapters .blurb {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+.chapters .num {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+/* back links */
+
+.backlink {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+/* ---------- print ---------- */
+
+@media print {
+  body { background: #fff; font-size: 12pt; }
+  nav.top, .backlink, footer.site .no-print { display: none; }
+  header.site { border-bottom: 2px solid #000; padding-top: 0; }
+  main { padding: 0.5rem 0; }
+  pre { border: 1px solid #999; background: #fff; }
+  .card, .chapters li { box-shadow: none; }
+  a { color: #000; text-decoration: none; }
+  .print-note { display: none; }
+}

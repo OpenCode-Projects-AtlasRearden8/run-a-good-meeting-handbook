@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Nothing else — this repo is intentionally minimal and local-first.

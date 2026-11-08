@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Gentle AI Assist for Recaps — Run a Good Meeting</title>
+  <meta name="description" content="Copy-paste AI prompts for meeting recaps: humans decide, AI tidies, privacy first. Part of a plain-English meeting handbook.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <p class="kicker">Chapter 04</p>
+      <h1>A Gentle AI Assist for Recaps</h1>
+      <p class="tagline">AI does the tidy-up labor. Humans keep the judgment.</p>
+    </div>
+  </header>
+
+  <nav class="top" aria-label="Main pages">
+    <div class="wrap">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="agendas.html">Agendas</a></li>
+        <li><a href="minutes.html">Minutes</a></li>
+        <li><a href="facilitation.html">On Track</a></li>
+        <li><a href="ai-assist.html" aria-current="page">AI Assist</a></li>
+        <li><a href="handbook.html">Full Handbook</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <a class="backlink" href="index.html">← All chapters</a>
+
+      <p>This chapter is deliberately tool-agnostic: whatever AI assistant you use, the pattern below stays the same — AI is a helpful typist, not the president of your club.</p>
+
+      <h2>The rule of thumbs</h2>
+      <ol>
+        <li><strong>Humans decide; AI tidies.</strong> Never let an AI output become a decision on its own — you review every line before anyone acts on it.</li>
+        <li><strong>Privacy first.</strong> Strip names (except action-item owners your group has already published), figures you're not comfortable sharing, and anything sensitive <em>before</em> pasting text into any tool. If your tool records audio, only record with everyone's clear okay, and check your group's bylaws.</li>
+        <li><strong>Verify easy things yourself.</strong> Dates, names, dollar amounts: ten seconds of checking beats an error living in your minutes for a year.</li>
+      </ol>
+
+      <h2>Use 1: Bullets into a readable recap</h2>
+      <p>You took rough bullet notes during the meeting (see the minutes chapter). Paste them in with a prompt like this:</p>
+
+      <pre><code>Here are rough meeting notes from our club meeting. Turn them into minutes
+using this structure only — do not invent anything not in the notes, and if
+something is unclear, write [CHECK: your best guess]. Keep it under one page.
+Structure:
+- Date &amp; attendees
+- Decisions (bold)
+- Action items (name — task — due date)
+- Tabled / parking lot
+- Next meeting
+
+Notes: [paste notes]</code></pre>
+
+      <p>The phrases doing the real work are <em>"do not invent anything"</em> and <em>"write [CHECK: your best guess]"</em> — they turn a confident guesser into an honest assistant that flags holes instead of papering over them. Fill the <code>[CHECK]</code> items yourself from memory.</p>
+
+      <h2>Use 2: Meeting notes into a friendly announcement</h2>
+      <p>Minutes are for the record; announcements get read:</p>
+
+      <pre><code>Write a 5-sentence email to club members based on these minutes: warm in
+tone, front-loads the one big decision, ends with who needs to do what by
+when. Keep our informal voice, no corporate phrases.</code></pre>
+
+      <p>You proofread and sign it yourself. The content is your minutes; the assistant is doing layout.</p>
+
+      <h2>Use 3: The decision history</h2>
+      <p>Paste the last three meetings' minutes and ask:</p>
+
+      <pre><code>List every open action item across these minutes, grouped by owner,
+with the latest due date mentioned for each. Flag any that appear
+twice with different dates.</code></pre>
+
+      <p>That last flag catches the classic club bug: the same task carried forward with quietly drifting deadlines. AI is genuinely good at this boring cross-referencing — the best non-creative use on this list.</p>
+
+      <h2>Use 4: Agenda help</h2>
+      <p>At the start of the cycle: <em>"Here are last month's minutes. Draft next meeting's agenda card: housekeeping, one main item, and questions to ask to close each open action."</em> Treat the result as a first draft — your agenda, your judgment on what matters.</p>
+
+      <h2>What not to hand to AI</h2>
+      <ul>
+        <li><strong>Raw recordings of sensitive discussions</strong> — personnel, discipline, members' personal finances.</li>
+        <li><strong>Voting records you intend to keep private</strong> — some orgs publish them, some don't; know which you are before pasting.</li>
+        <li><strong>Anything where being wrong matters a lot</strong> — financial statements, legal notices, bylaws amendments. Draft by hand; use AI only to check tone or clarity.</li>
+      </ul>
+
+      <div class="tip">
+        AI makes recaps 80% faster because 80% of recap work is mechanical reorganization. The remaining 20% — judgment about what matters, what's fair, what's kind — is yours. And that's the good news: it stays that way.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>Run a Good Meeting · © 2026 Asdale Dynamics, LLC · MIT License · <a href="index.html">Back to home</a></p>
+    </div>
+  </footer>
+</body>
+</html>
